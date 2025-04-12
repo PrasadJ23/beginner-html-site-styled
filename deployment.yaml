@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: website-deployment
+  name: html-site-deployment
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: website
+      app: html-site
   template:
     metadata:
       labels:
-        app: website
+        app: html-site
     spec:
       containers:
-      - name: website
-        image: prasadj23/website:latest
+      - name: html-site
+        image: prasadj23/html-site:latest
         ports:
         - containerPort: 80
